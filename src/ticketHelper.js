@@ -44,8 +44,25 @@ const blacklistTickets = [
   32n,
   33n,
   34n,
+  35n,
+  36n,
+  37n,
+  38n,
+
+  39n,
+  40n,
+  41n,
+  42n,
+  43n,
+  44n,
+  45n,
+  46n,
+  47n,
+  48n,
+  49n,
+  50n,
 ]; // the 'n' is for BigInt, so 1n is 1 in BigInt
-const whitelistTickets = [36n, 37n, 38n, 39n, 40n, 41n, 42n, 43n]; // the 'n' is for BigInt, so 1n is 1 in BigInt
+const whitelistTickets = [51n, 52n, 53n, 54n, 55n, 56n, 57n, 58n, 59n, 60n]; // the 'n' is for BigInt, so 1n is 1 in BigInt
 export class Ticket {
   constructor({ artistName, name, location, venueName, date, pictureSrc }) {
     this.name = name;

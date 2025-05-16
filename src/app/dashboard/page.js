@@ -24,7 +24,7 @@ const MyPage = () => {
   return (
     <div
       className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4 mb-[50px]"
-      onClick={() => Ticket.populateChain()}
+      // onClick={() => Ticket.populateChain()}
     >
       <h1 className="text-4xl font-bold mb-6">SecuroTik</h1>
       <div className="w-full flex flex-col gap-[15px]">
