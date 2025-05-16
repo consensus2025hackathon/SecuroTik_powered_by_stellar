@@ -57,6 +57,14 @@ Our method of authenticating users and signing transactions, as documented by St
 
 Stellar Developer Docs : https://developers.stellar.org/
 
+The Narrative: https://docs.google.com/document/d/1pPCACbfzvb4Pk20OuzQjv7LpqjDwDNOg3IMG-R4cDV0/edit?usp=sharing
+
+Technical Docs: https://docs.google.com/document/d/1oCxmS3MZI1_hYd6UiK-dwW7vn_K6dod1gBnFWA-VfDA/edit?usp=sharing
+
+Contract ID Stellar Expert Link: https://stellar.expert/explorer/testnet/contract/CAWSIHRK6FF2R2AWQT6HRO7RJYV5SPFKTAUZFEXFWD5COPTEAAVK62QP
+
+Contract ID: CAWSIHRK6FF2R2AWQT6HRO7RJYV5SPFKTAUZFEXFWD5COPTEAAVK62QP
+
 Presentation slides : https://www.canva.com/design/DAGlwOQ7U-k/3AZU1fcIiz6qfhmwpOQ-Hw/edit?utm_content=DAGlwOQ7U-k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 Twitter thread : https://x.com/pramay07_/status/1916258393859248542
