@@ -6,7 +6,11 @@ SecuroTik aims to bring transparency and security to the ticket resale market, r
 
 ## Pictures & Videos!
 
-https://raw.githubusercontent.com/consensus2025hackathon/SecuroTik_powered_by_stellar/refs/heads/master/demo/demo.mp4
+
+
+https://github.com/user-attachments/assets/8ab7e3e2-3479-4138-95aa-20d5b101111b
+
+
 
 <img width="245" alt="Image" src="https://raw.githubusercontent.com/consensus2025hackathon/SecuroTik_powered_by_stellar/refs/heads/master/demo/images/login_register.png" />
 <img width="245" alt="Image" src="https://github.com/consensus2025hackathon/SecuroTik_powered_by_stellar/blob/master/demo/images/passkey_login.png?raw=true" />
