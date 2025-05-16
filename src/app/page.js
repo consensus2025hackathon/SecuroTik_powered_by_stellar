@@ -17,10 +17,43 @@ const PUBLIC_FACTORY_CONTRACT_ID =
   process.env.NEXT_PUBLIC_FACTORY_CONTRACT_ID ||
   "CDL3HLH5AAND2B2LUDKNUWJ2AASXPKWXBYJNUPCI3XLA25E6DGT3QYIS"; // Example factory, replace if you have a specific one
 
-export default function SecureTikUI() {
+async function getClaimCodeFromGen() {
+  const response = await fetch("https://testnet.launchtube.xyz/gen");
+  let code = await response.json();
+  return code[0];
+}
+
+async function claimToken(claimCode) {
+  const url = "https://testnet.launchtube.xyz/claim";
+  const body = JSON.stringify({ code: claimCode });
+
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body,
+  });
+
+  const html = await response.text();
+
+  // Extract the JWT token from the HTML response
+  const match = html.match(/Token:\s*([\w-]+\.[\w-]+\.[\w-]+)/i);
+  const token = match ? match[1] : null;
+
+  if (token) {
+    console.log("✅ JWT Token:", token);
+  } else {
+    console.error("❌ Could not find JWT token in response.");
+  }
+
+  return token;
+}
+
+export default function SecuroTikUI() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [publicKey, setPublicKey] = useState(localStorage.getItem("public")); // To store user's public key after login
-  const [privateKey, setPrivateKey] = useState(localStorage.getItem("private")); // To store user's public key after login
+  const [publicKey, setPublicKey] = useState(null); // To store user's public key after login
+  const [privateKey, setPrivateKey] = useState(null); // To store user's public key after login
   const [userHandle, setUserHandle] = useState(null); // To store user handle for registration/login
   const [isInitializing, setIsInitializing] = useState(true);
   const [statusMessage, setStatusMessage] = useState("");
@@ -44,6 +77,7 @@ export default function SecureTikUI() {
           localStorage.getItem("public") != "null"
         ) {
           window.location.href = "/dashboard/my";
+        } else {
         }
       }
       setIsInitializing(false);
@@ -57,6 +91,13 @@ export default function SecureTikUI() {
       return;
     }
     setStatusMessage("Starting registration...");
+    try {
+      const claimCode = await getClaimCodeFromGen();
+      const token = await claimToken(claimCode);
+      localStorage.setItem("jwtToken", token);
+    } catch (err) {
+      console.error("🚨 Signup failed:", err.message);
+    }
     try {
       const username = prompt(
         "Please enter a username for registration (this will be public):"
@@ -292,8 +333,16 @@ export default function SecureTikUI() {
   };
 
   useEffect(() => {
-    localStorage.setItem("public", publicKey);
-    localStorage.setItem("private", privateKey);
+    // localStorage.setItem("public", publicKey);
+    // localStorage.setItem("private", privateKey);
+    localStorage.setItem(
+      "public",
+      "GBNM4VZQPOWGIU3JURIH5W5GXDQKGZKS3XJCLBBGPCWP44V56FPUJTY3"
+    );
+    localStorage.setItem(
+      "private",
+      "SDL7N3OSIYK4KMOA2KAH62XX5O3FVE4XVEDJTMJMSFBOZHLWB7HPAGD3"
+    );
   }, [publicKey, privateKey]);
 
   if (isInitializing) {
@@ -307,7 +356,7 @@ export default function SecureTikUI() {
   }
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
-      <h1 className="text-4xl font-bold mb-6">SecureTik</h1>
+      <h1 className="text-4xl font-bold mb-6">SecuroTik</h1>
 
       <div className="bg-white rounded-2xl drop-shadow-2xl p-6 w-full max-w-md mb-8">
         <h2 className="text-2xl font-semibold text-center mb-2">
@@ -317,13 +366,13 @@ export default function SecureTikUI() {
           Securely access your NFT tickets using passkeys
         </p>
         <button
-          className="cursor-pointer w-full py-3 mb-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
+          className="cursor-pointer w-full py-3 mb-3 bg-blue-500 focus:bg-blue-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
           onClick={handleLogin}
         >
           <span>🔑</span> Login with passkey
         </button>
         <button
-          className="cursor-pointer w-full py-3 bg-yellow-400 hover:bg-yellow-500 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
+          className="cursor-pointer w-full py-3 bg-yellow-400 focus:bg-yellow-500 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
           onClick={handleRegister}
         >
           <span>🔑</span> Signup with passkey
@@ -361,7 +410,7 @@ export default function SecureTikUI() {
             <p className=" text-gray-600 mb-4">
               Hozier – Unreal Unearth Tour 2025
             </p>
-            <button className="bg-blue-500 hover:bg-blue-600 w-full text-white font-semibold px-4 py-2 rounded-full">
+            <button className="bg-blue-500 focus:bg-blue-600 w-full text-white font-semibold px-4 py-2 rounded-full">
               Buy tickets
             </button>
           </div>
