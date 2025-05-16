@@ -52,6 +52,12 @@ The Solana smart contract, written in Rust, is the method in which we secure and
 
 ---
 
+
+## :) Try It!
+
+https://silver-sunshine-6d8ed1.netlify.app/
+---
+
 ## 🔗 The Passkey System
 
 Our method of authenticating users and signing transactions, as documented by Stellar! Our secret sauce to ensuring the smoothest user experience possible, a smooth and easy transaction approval system which doesn't require emails, passwords, or any pesky 2 step authorization. The Stellar Passkey allowed us to greatly speed up the transaction signing process by eliminating the need to connect to a wallet, rather, instantiating a wallet upon initial passkey registration and saving locally onto a user's device.
@@ -66,9 +72,9 @@ The Narrative: https://docs.google.com/document/d/1pPCACbfzvb4Pk20OuzQjv7LpqjDwD
 
 Technical Docs: https://docs.google.com/document/d/1oCxmS3MZI1_hYd6UiK-dwW7vn_K6dod1gBnFWA-VfDA/edit?usp=sharing
 
-Contract ID Stellar Expert Link: https://stellar.expert/explorer/testnet/contract/CCS43GO23KAF77M2BR5OG5AW3MZIP5NZCIZVXAUQE6LSDFPRTVYR5JFK
+Contract ID Stellar Expert Link: https://stellar.expert/explorer/testnet/contract/CAWSIHRK6FF2R2AWQT6HRO7RJYV5SPFKTAUZFEXFWD5COPTEAAVK62QP
 
-Contract ID: CCS43GO23KAF77M2BR5OG5AW3MZIP5NZCIZVXAUQE6LSDFPRTVYR5JFK
+Contract ID: CAWSIHRK6FF2R2AWQT6HRO7RJYV5SPFKTAUZFEXFWD5COPTEAAVK62QP
 
 Presentation slides : https://www.canva.com/design/DAGnnmmeRz4/4iBaAvog23e29RWs6Ym5cA/edit?utm_content=DAGnnmmeRz4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
