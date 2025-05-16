@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 // We'll need PasskeyServer from passkey-kit here
 // import { PasskeyServer } from 'passkey-kit/server'; // Adjust import path as per actual package structure
 
@@ -12,8 +12,8 @@ import { NextResponse } from 'next/server';
 //   factoryContractId: process.env.PUBLIC_FACTORY_CONTRACT_ID,
 //   networkPassphrase: process.env.PUBLIC_NETWORK_PASSPHRASE,
 //   appName: 'NFT Ticket Platform',
-//   appOrigin: process.env.APP_ORIGIN, // e.g., 'http://localhost:3000' or your production domain
-  // relyingPartyId: process.env.RELYING_PARTY_ID, // often the domain name
+//   appOrigin: process.env.APP_ORIGIN, // e.g., 'http://silver-sunshine-6d8ed1.netlify.app:3000' or your production domain
+// relyingPartyId: process.env.RELYING_PARTY_ID, // often the domain name
 // });
 
 export async function POST(request) {
@@ -21,19 +21,24 @@ export async function POST(request) {
     const { username } = await request.json();
 
     if (!username) {
-      return NextResponse.json({ error: 'Username is required' }, { status: 400 });
+      return NextResponse.json(
+        { error: "Username is required" },
+        { status: 400 }
+      );
     }
 
-    console.log(`API: Generating registration options for username: ${username}`);
+    console.log(
+      `API: Generating registration options for username: ${username}`
+    );
 
     // TODO: Initialize and use passkeyServer.getRegistrationOptions(username)
     // This will generate the PublicKeyCredentialCreationOptions
     // For now, returning a placeholder. This structure is CRITICAL and must match WebAuthn spec.
     const creationOptions = {
-      challenge: 'mockChallengeValueLookingLikeAChallengeValueBase64URLEncoded', // Should be securely generated, base64url encoded ArrayBuffer
+      challenge: "mockChallengeValueLookingLikeAChallengeValueBase64URLEncoded", // Should be securely generated, base64url encoded ArrayBuffer
       rp: {
-        name: 'NFT Ticket Platform',
-        id: 'localhost', // IMPORTANT: This MUST match your website's domain in production
+        name: "NFT Ticket Platform",
+        id: "silver-sunshine-6d8ed1.netlify.app", // IMPORTANT: This MUST match your website's domain in production
       },
       user: {
         id: username, // This should be a stable, unique user ID (base64url encoded ArrayBuffer)
@@ -41,27 +46,29 @@ export async function POST(request) {
         displayName: username,
       },
       pubKeyCredParams: [
-        { type: 'public-key', alg: -7 }, // ES256
-        { type: 'public-key', alg: -257 } // RS256
+        { type: "public-key", alg: -7 }, // ES256
+        { type: "public-key", alg: -257 }, // RS256
       ],
       authenticatorSelection: {
-        authenticatorAttachment: 'platform', // or 'cross-platform'
+        authenticatorAttachment: "platform", // or 'cross-platform'
         requireResidentKey: true, // Recommended for discoverable credentials
-        userVerification: 'preferred',
+        userVerification: "preferred",
       },
       timeout: 60000,
-      attestation: 'direct', // or 'none', 'indirect'
+      attestation: "direct", // or 'none', 'indirect'
     };
 
     // TODO: Store the challenge temporarily (e.g., in session or a short-lived DB record)
     // to verify it during the completion step.
     // For example: request.session.set('currentChallenge', challenge);
 
-    console.log('API: Mock registration options generated:', creationOptions);
+    console.log("API: Mock registration options generated:", creationOptions);
     return NextResponse.json(creationOptions);
-
   } catch (error) {
-    console.error('API Error - register-options:', error);
-    return NextResponse.json({ error: error.message || 'Failed to get registration options' }, { status: 500 });
+    console.error("API Error - register-options:", error);
+    return NextResponse.json(
+      { error: error.message || "Failed to get registration options" },
+      { status: 500 }
+    );
   }
-} 
+}

@@ -8,8 +8,8 @@ import { Keypair } from "stellar-sdk";
 // factory contract, network passphrase, appName, appOrigin, and relyingPartyId.
 // const passkeyServer = new PasskeyServer({
 //   appName: 'NFT Ticket Platform',
-//   appOrigin: process.env.APP_ORIGIN, // e.g., 'http://localhost:3000' or your production domain
-//   relyingPartyId: process.env.RELYING_PARTY_ID, // e.g., 'localhost' or your domain
+//   appOrigin: process.env.APP_ORIGIN, // e.g., 'http://silver-sunshine-6d8ed1.netlify.app:3000' or your production domain
+//   relyingPartyId: process.env.RELYING_PARTY_ID, // e.g., 'silver-sunshine-6d8ed1.netlify.app' or your domain
 // ... other params like rpcUrl, launchtubeUrl etc. if PasskeyServer uses them directly for this step
 // });
 // --- End PasskeyServer Initialization Placeholder ---
@@ -65,8 +65,8 @@ export async function POST(request) {
     // const verificationResult = await passkeyServer.verifyRegistrationResponse({
     //   response: credential, // The credential object from the client
     //   expectedChallenge: mockExpectedChallenge, // The challenge stored from the options phase
-    //   expectedOrigin: process.env.APP_ORIGIN, // e.g., 'http://localhost:3000'
-    //   expectedRPID: process.env.RELYING_PARTY_ID, // e.g., 'localhost'
+    //   expectedOrigin: process.env.APP_ORIGIN, // e.g., 'http://silver-sunshine-6d8ed1.netlify.app:3000'
+    //   expectedRPID: process.env.RELYING_PARTY_ID, // e.g., 'silver-sunshine-6d8ed1.netlify.app'
     //   requireUserVerification: true, // Or based on your policy
     // });
     //
