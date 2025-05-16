@@ -55,7 +55,7 @@ const MyPage = () => {
           responsive={{
             mobile: {
               breakpoint: {
-                max: 700,
+                max: 3000,
                 min: 0,
               },
               items: 1,
