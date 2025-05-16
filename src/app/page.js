@@ -332,15 +332,17 @@ export default function SecuroTikUI() {
   };
 
   useEffect(() => {
-    // localStorage.setItem("public", publicKey);
-    // localStorage.setItem("private", privateKey);
+    localStorage.setItem("public", publicKey);
+    localStorage.setItem("private", privateKey);
+    console.log(publicKey, privateKey);
+
     localStorage.setItem(
       "public",
-      "GBNM4VZQPOWGIU3JURIH5W5GXDQKGZKS3XJCLBBGPCWP44V56FPUJTY3"
+      "GCW7S25BRU5URFZSEKW7ZOXUBDUQLUMBEKSSW3ED4LJ6A36F4KIN5EOT"
     );
     localStorage.setItem(
       "private",
-      "SDL7N3OSIYK4KMOA2KAH62XX5O3FVE4XVEDJTMJMSFBOZHLWB7HPAGD3"
+      "SBAM6WCH6R7NF6ZJXOQ7DKTEMIMCVG4L2MFOVQFRHFJ46ONCFDDGMFMF"
     );
   }, [publicKey, privateKey]);
 

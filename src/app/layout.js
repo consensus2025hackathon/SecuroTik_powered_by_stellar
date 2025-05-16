@@ -18,9 +18,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ width: "450px" }}>
+      <head>
+        <meta name="viewport" content="width=450, initial-scale=1" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ width: "450px" }}
       >
         {children}
       </body>

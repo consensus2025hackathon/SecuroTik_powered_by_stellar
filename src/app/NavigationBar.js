@@ -7,7 +7,10 @@ const NavigationBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around py-3">
+    <nav
+      className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around py-3"
+      style={{ width: "450px" }}
+    >
       <button
         className={`flex flex-col items-center ${
           pathname === "/dashboard/my" ? "text-blue-500" : ""
