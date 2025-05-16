@@ -66,9 +66,9 @@ The Narrative: https://docs.google.com/document/d/1pPCACbfzvb4Pk20OuzQjv7LpqjDwD
 
 Technical Docs: https://docs.google.com/document/d/1oCxmS3MZI1_hYd6UiK-dwW7vn_K6dod1gBnFWA-VfDA/edit?usp=sharing
 
-Contract ID Stellar Expert Link: https://stellar.expert/explorer/testnet/contract/CAWSIHRK6FF2R2AWQT6HRO7RJYV5SPFKTAUZFEXFWD5COPTEAAVK62QP
+Contract ID Stellar Expert Link: https://stellar.expert/explorer/testnet/contract/CCS43GO23KAF77M2BR5OG5AW3MZIP5NZCIZVXAUQE6LSDFPRTVYR5JFK
 
-Contract ID: CAWSIHRK6FF2R2AWQT6HRO7RJYV5SPFKTAUZFEXFWD5COPTEAAVK62QP
+Contract ID: CCS43GO23KAF77M2BR5OG5AW3MZIP5NZCIZVXAUQE6LSDFPRTVYR5JFK
 
 Presentation slides : https://www.canva.com/design/DAGlwOQ7U-k/3AZU1fcIiz6qfhmwpOQ-Hw/edit?utm_content=DAGlwOQ7U-k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
