@@ -70,6 +70,5 @@ Contract ID Stellar Expert Link: https://stellar.expert/explorer/testnet/contrac
 
 Contract ID: CCS43GO23KAF77M2BR5OG5AW3MZIP5NZCIZVXAUQE6LSDFPRTVYR5JFK
 
-Presentation slides : https://www.canva.com/design/DAGlwOQ7U-k/3AZU1fcIiz6qfhmwpOQ-Hw/edit?utm_content=DAGlwOQ7U-k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Presentation slides : https://www.canva.com/design/DAGnnmmeRz4/4iBaAvog23e29RWs6Ym5cA/edit?utm_content=DAGnnmmeRz4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-Twitter thread : https://x.com/pramay07_/status/1916258393859248542
