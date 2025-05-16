@@ -6,7 +6,6 @@ import styles from "./page.module.css"; // We'll create this later
 import { PasskeyKit } from "passkey-kit";
 import { useState, useEffect, useRef } from "react";
 import { arrayBufferToBase64url, base64urlToArrayBuffer } from "./helper";
-import { signTransaction, isConnected } from "@stellar/freighter-api";
 
 const PUBLIC_RPC_URL =
   process.env.NEXT_PUBLIC_RPC_URL || "https://soroban-testnet.stellar.org";

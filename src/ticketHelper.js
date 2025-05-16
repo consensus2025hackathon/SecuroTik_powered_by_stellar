@@ -3,40 +3,49 @@ import { Client, basicNodeSigner } from "@stellar/stellar-sdk/contract";
 
 const RPC_URL = "https://soroban-testnet.stellar.org";
 const NETWORK_PASSPHRASE = "Test SDF Network ; September 2015";
-// const WASM_HASH =
-//   "686dfd0a069a826d19c3ccf441a984c7ddb666dbeb64dfed2db62df63ae7cb2f"; // e.g. bc7d436…7527f :contentReference[oaicite:0]{index=0}
 const WASM_HASH =
-  "e65f5091a83f8d2f67e4c57ad8a8257f2a2d8c2ac271cc775615b2a7baa0ac52";
-// const CONTRACT_ID = "CAWSIHRK6FF2R2AWQT6HRO7RJYV5SPFKTAUZFEXFWD5COPTEAAVK62QP"; // the deployed instance ID
-const CONTRACT_ID = "CCS43GO23KAF77M2BR5OG5AW3MZIP5NZCIZVXAUQE6LSDFPRTVYR5JFK";
+  "686dfd0a069a826d19c3ccf441a984c7ddb666dbeb64dfed2db62df63ae7cb2f"; // e.g. bc7d436…7527f :contentReference[oaicite:0]{index=0}
+// const WASM_HASH =
+//   "e65f5091a83f8d2f67e4c57ad8a8257f2a2d8c2ac271cc775615b2a7baa0ac52";
+const CONTRACT_ID = "CAWSIHRK6FF2R2AWQT6HRO7RJYV5SPFKTAUZFEXFWD5COPTEAAVK62QP"; // the deployed instance ID
+// const CONTRACT_ID = "CCS43GO23KAF77M2BR5OG5AW3MZIP5NZCIZVXAUQE6LSDFPRTVYR5JFK";
 const blacklistTickets = [
-  // 1n,
-  // 2n,
-  // 3n,
-  // 4n,
-  // 5n,
-  // 6n,
-  // 7n,
-  // 8n,
-  // 9n,
-  // 10n,
-  // 11n,
-  // 12n,
-  // 13n,
-  // 14n,
-  // 15n,
-  // 16n,
-  // 17n,
-  // 18n,
-  // 19n,
-  // 20n,
-  // 21n,
-  // 22n,
-  // 23n,
-  // 24n,
-  // 25n,
+  1n,
+  2n,
+  3n,
+  4n,
+  5n,
+  6n,
+  7n,
+  8n,
+  9n,
+  10n,
+  11n,
+  12n,
+  13n,
+  14n,
+  15n,
+  16n,
+  17n,
+  18n,
+  19n,
+  20n,
+  21n,
+  22n,
+  23n,
+  24n,
+  25n,
+  26n,
+  27n,
+  28n,
+  29n,
+  30n,
+  31n,
+  32n,
+  33n,
+  34n,
 ]; // the 'n' is for BigInt, so 1n is 1 in BigInt
-const whitelistTickets = [1n, 2n, 3n, 4n, 5n, 6n, 7n, 8n, 9n, 10n]; // the 'n' is for BigInt, so 1n is 1 in BigInt
+const whitelistTickets = [36n, 37n, 38n, 39n, 40n, 41n, 42n, 43n]; // the 'n' is for BigInt, so 1n is 1 in BigInt
 export class Ticket {
   constructor({ artistName, name, location, venueName, date, pictureSrc }) {
     this.name = name;

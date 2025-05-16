@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ShowTicketInfo from "./ShowTicketInfo";
 
 const TicketComponent = ({
   onClick,
   ticket,
+  active,
   buyable = false,
   resell = false,
 }) => {

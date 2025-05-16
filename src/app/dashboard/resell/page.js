@@ -11,6 +11,8 @@ import "react-multi-carousel/lib/styles.css";
 const MyPage = () => {
   const [tickets, setTickets] = useState([]);
   const [ticketToBuy, setTicketToBuy] = useState(null);
+  const [currentlyStop, setcurrentlyStop] = useState(null);
+
   useEffect(() => {
     const fetchTickets = async () => {
       setTickets(await Ticket.listTickets());
@@ -65,6 +67,18 @@ const MyPage = () => {
           sliderClass=""
           slidesToSlide={1}
           swipeable
+          afterChange={(previousSlide, { currentSlide }) => {
+            if (currentlyStop) {
+              currentlyStop.pause();
+            }
+            const songs = tickets.map((ticket) =>
+              ticket.pictureSrc.replace("png", "mp3").replace("images", "songs")
+            );
+
+            const audio = new Audio(songs[currentSlide - 2]);
+            audio.play();
+            setcurrentlyStop(audio);
+          }}
         >
           {tickets.map((ticket, index) => (
             <div key={index} className="flex justify-center">
