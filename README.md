@@ -7,13 +7,12 @@ SecuroTik aims to bring transparency and security to the ticket resale market, r
 ## Pictures & Videos!
 
 
-
 https://github.com/user-attachments/assets/8ab7e3e2-3479-4138-95aa-20d5b101111b
-![resale_market](https://github.com/user-attachments/assets/a9e59f37-576f-417e-8ed8-f8d7b8de1903)
-![passkey_login](https://github.com/user-attachments/assets/648f230f-9616-430d-8adb-741f91af9f7e)
-![mytickets_information](https://github.com/user-attachments/assets/4cd77380-33d1-4d29-b7a3-e8b97641d66e)
-![main_market](https://github.com/user-attachments/assets/77ab0cc0-8f96-4c68-99f0-85468c05ad75)
-![login_register](https://github.com/user-attachments/assets/b65ac222-8201-4081-a4cb-3e33c349dbab)
+
+<img width="245" alt="Image" src="https://raw.githubusercontent.com/consensus2025hackathon/SecuroTik_powered_by_stellar/refs/heads/master/demo/images/login_register.png" />
+<img width="245" alt="Image" src="https://github.com/consensus2025hackathon/SecuroTik_powered_by_stellar/blob/master/demo/images/passkey_login.png?raw=true" />
+<img width="245" alt="Image" src="https://github.com/consensus2025hackathon/SecuroTik_powered_by_stellar/blob/master/demo/images/mytickets_information.png?raw=true" />
+<img width="245" alt="Image" src="https://github.com/consensus2025hackathon/SecuroTik_powered_by_stellar/blob/master/demo/images/main_market.png?raw=true" />
 
 
 
